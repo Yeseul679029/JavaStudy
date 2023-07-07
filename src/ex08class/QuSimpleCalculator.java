@@ -21,7 +21,7 @@ init() 멤버메소드에서는 계산의 결과를 카운트하는 멤버변수
 
 class CalculatorEx{
 	//멤버변수
-	double num1,num2;
+//	double num1,num2;
 	int addcnt,mincnt,mulcnt,divcnt;
 	
 	//더하기

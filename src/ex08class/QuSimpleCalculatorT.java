@@ -1,0 +1,72 @@
+package ex08class;
+
+class CalculatorExT{
+	//멤버변수 : 연산의 횟수 카운트 
+	int addCount;
+	int minCount;
+	int mulCount;
+	int divCount;
+	
+	//디폴트 생성자
+	public CalculatorExT() {}
+	
+	//반환값이 없음
+	//초기화메서드 : 연산의 횟수를 0으로 초기화한다.
+	void init(){
+		addCount = 0;
+		minCount = 0;
+		mulCount = 0;
+		divCount = 0;
+	}
+	//덧셈연산
+	double add(double n1,double n2){
+		//연산횟수 1증가
+		addCount++;
+		return n1+n2;
+	}
+	double min(double n1,double n2){
+		//연산횟수 1증가
+		minCount++;
+		return n1-n2;
+	}
+	double mul(double n1,double n2){
+		//연산횟수 1증가
+		mulCount++;
+		return n1*n2;
+	}
+	double div(double n1,double n2){
+		//연산횟수 1증가
+		divCount++;
+		return n1/n2;
+	}
+	
+	void showOpCount() {
+//		System.out.printf("덧셈횟수: %f\n",addCount);
+		StringBuffer sb = new StringBuffer();
+		//\n을 앞에 붙여도 똑같이 줄바꿈이된다.
+		sb.append("\n덧셈횟수:"+addCount);
+		sb.append("\n뺄셈횟수:"+minCount);
+		sb.append("\n곱셈횟수:"+mulCount);
+		sb.append("\n나눗셈횟수:"+divCount);
+		System.out.println(sb);
+	}
+}
+
+public class QuSimpleCalculatorT {
+
+	//에러가 나는 부분을 하나씩 처리해간다.
+	public static void main(String[] args)
+	{
+		//해당 클래스의 생성자함수를 호출해주는 메서드
+		//함수안에 아무것도없어서 디폴드 생성자인것같다
+		CalculatorExT cal = new CalculatorExT();
+		cal.init();
+		System.out.println("1 + 2 = " + cal.add(1 , 2));
+		System.out.println("10.5 - 5.5 = " + cal.min(10.5 , 5.5));
+		System.out.println("4.0 * 5.0 = " + cal.mul(4.0 , 5.0));
+		System.out.println("100 / 25 = " + cal.div(100 , 25));
+		System.out.println("10.0 * 3.0 = " + cal.mul(10.0 , 3.0));
+		cal.showOpCount();
+	}	
+
+}
