@@ -12,19 +12,19 @@ package ex08class;
  */
 
 class AccountP{
-	
+	//멤버변수
 	String name;
-	String accountNumber;
+	String accountNum;
 	int balance;
 	
 	void deposit(int money) {
-		balance+=money;
+		balance += money;
 		System.out.println(money+"원이 입금됨");
 	}
 	
 	void withdraw(int money) {
-		if(balance>=money) {
-			balance-=money;
+		if(balance>= money) {
+			balance -=money;
 			System.out.println("계좌에서 "+money+"원이 출금됨");
 		}
 		else {
@@ -33,18 +33,15 @@ class AccountP{
 	}
 	
 	void showAccount() {
-		System.out.println("계좌주: "+name);
-		System.out.println("계좌번호: "+accountNumber);
-		System.out.println("잔고: "+balance);
+		System.out.println("계좌주:"+name);
+		System.out.println("계좌번호:"+ accountNum);
+		System.out.println("잔고:"+ balance+"원");
 	}
-	
 	void init(String n, String a, int b) {
 		name = n;
-		accountNumber = a;
+		accountNum = a;
 		balance = b;
 	}
-	
-	
 	
 }
 
@@ -52,18 +49,17 @@ public class E04AccountMainP {
 
 	public static void main(String[] args) {
 
-		AccountP account = new AccountP();
-		account.init("장동건", "111-21-8888", 1000);
-		account.deposit(9000);
-		account.withdraw(5000);
+		AccountP account =new AccountP();
+		account.init("김지현", "3333-15-49368", 50000000);
+		account.deposit(2000000);
+		account.withdraw(100000);
 		account.showAccount();
 		
 		AccountP account2 = new AccountP();
-		account2.name = "정우성";
-		account2.accountNumber = "123-45-67890";
-		account2.balance = 900000;
+		account2.name ="김렘렘";
+		account2.accountNum = "124124124012934";
+		account2.balance = 300;
 		account2.showAccount();
-		
 		
 		
 	}

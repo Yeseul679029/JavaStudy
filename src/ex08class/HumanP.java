@@ -16,39 +16,49 @@ public class HumanP {
 	String name;
 	int age;
 	int energy;
+	int kibun;
 	
 	void walking() {
 		energy--;
+		kibun--;
 		if(energy<0) {
 			energy=0;
 			System.out.println("[walk]에너지는 0이 최소입니다.");
+			System.out.println("[walk]기분은 0이 최소입니다.");
 			System.out.println("0으로 고정됩니다.");
 		}
 		else {
 			System.out.println("[walk]에너지가 1감소하였습니다.");
+			System.out.println("[walk]기분이 1감소하였습니다.");
 		}
 	}
 	
 	void thinking() {
 		energy -=2;
+		kibun -=2;
 		if(energy<0) {
 			energy=0;
 			System.out.println("[thinking]에너지는 0이 최소입니다.");
+			System.out.println("[thinking]기분은 0이 최소입니다.");
 			System.out.println("0으로 고정됩니다.");
 		}
 		else {
 			System.out.println("[thinking]에너지가 2감소하였습니다.");
+			System.out.println("[thinking]기분이 2감소하였습니다.");
 		}
 	}
 	
 	void eating() {
 		energy+=2;
+		kibun++;
 		if(energy>10) {
 			energy=10;
 			System.out.println("[eat]에너지는 10이 최대입니다.");
+			System.out.println("[eat]기분은 10이 최대입니다.");
 		}
 		else {
 			System.out.println("[eat]에너지가 2증가하였습니다.");
+			System.out.println("[eat]기분이 1증가하였습니다.");
 		}
 	}
 	void showState() {
@@ -56,6 +66,7 @@ public class HumanP {
 		System.out.println("이름:"+name);
 		System.out.println("나이:"+age);
 		System.out.println("에너지:"+energy);
+		System.out.println("기분:"+kibun);
 		System.out.println("====================");
 	}
 	

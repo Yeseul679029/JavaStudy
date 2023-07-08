@@ -8,6 +8,7 @@ public class E02HumanMainP {
 		human.name = "김지현";
 		human.age = 28;
 		human.energy = 4;
+		human.kibun = 5;
 		
 		human.showState();
 		human.eating();

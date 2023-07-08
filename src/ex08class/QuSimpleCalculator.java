@@ -21,45 +21,49 @@ init() 멤버메소드에서는 계산의 결과를 카운트하는 멤버변수
 
 class CalculatorEx{
 	//멤버변수
-//	double num1,num2;
-	int addcnt,mincnt,mulcnt,divcnt;
+	int addcnt;
+	int mincnt;
+	int mulcnt;
+	int divcnt;
 	
-	//더하기
-	double add(double num1,double num2) {
-		addcnt++;
-		return num1+num2;
-	}
-	//빼기
-	double min(double num1,double num2) {
-		mincnt++;
-		return num1-num2;
-	}
-	//곱하기
-	double mul(double num1,double num2) {
-		mulcnt++;
-		return num1*num2;
-	}
-	//나누기
-	double div(double num1,double num2) {
-	 
-		divcnt++;
-		return num1/num2;
-	}
-	//초기화
+	//멤버메소드
 	void init() {
 		addcnt=0;
 		mincnt=0;
 		mulcnt=0;
 		divcnt=0;
 	}
-	
-	void showOpCount() {
-		System.out.println("덧셈횟수:"+addcnt);
-		System.out.println("뺄셈횟수:"+mincnt);
-		System.out.println("곱셈횟수:"+mulcnt);
-		System.out.println("나눗셈횟수:"+divcnt);
+	double add(double n1,double n2) {
+		double result = n1+n2; 
+		addcnt++;
+		return result;
 	}
+	double min(double n1,double n2) {
+		double result = n1-n2; 
+		mincnt++;
+		return result;
+	}
+	double mul(double n1,double n2) {
+		double result = n1*n2; 
+		mulcnt++;
+		return result;
+	}
+	double div(double n1,double n2) {
+		double result = n1/n2; 
+		divcnt++;
+		return result;
+	}
+	void showOpCount() {
+		StringBuffer str = new StringBuffer();
+		str.append("\n덧셈횟수: "+addcnt);
+		str.append("\n뺄셈횟수: "+mincnt);
+		str.append("\n곱셈횟수: "+mulcnt);
+		str.append("\n나눗셈횟수: "+divcnt);
+		System.out.println(str);
+	}
+	
 }
+
 
 public class QuSimpleCalculator {
 	
