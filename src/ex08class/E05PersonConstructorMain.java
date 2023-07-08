@@ -36,6 +36,10 @@ public class E05PersonConstructorMain {
 		PersonConstructor person4 = 
 				new PersonConstructor("박길동", 50, "가산동");
 		person4.showPersonInfo();
+		person4.showPersonInfo();
+		person4.showPersonInfo();
+		person4.showPersonInfo();
+		
 		
 	}
 
