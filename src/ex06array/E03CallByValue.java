@@ -42,7 +42,7 @@ public class E03CallByValue {
 		temp = fNum;
 		fNum = sNum;
 		sNum = temp;
-		//해당 메서드 내에서는 값으 교환이 완료되었기 때문에
+		//해당 메서드 내에서는 값의 교환이 완료되었기 때문에
 		//출력결과2 : 200, 100
 		System.out.println("[callByValue메소드안]"
 					+"first="+fNum+", second="+sNum);
