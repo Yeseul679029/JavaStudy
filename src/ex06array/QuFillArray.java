@@ -13,22 +13,24 @@ public class QuFillArray {
 
 	public static void main(String[] args) {
 		
-		Scanner scanner = new Scanner(System.in);
-		int[] array = new int[10];
+//		Scanner scanner = new Scanner(System.in);
+//		int[] array = new int[10];
+		int[] array = new int[] {1,3,4,5,2,6,7,8,9,0};
 		int arrayNum;
 		
 		//array의 크기만큼 반복해서 수 채워넣기
 		for(int i=0;i<array.length;i++) {
-			System.out.print((i+1)+"번째 정수를 입력하세요: ");
-			arrayNum = scanner.nextInt();
-			array[i]= arrayNum;
+//			System.out.print((i+1)+"번째 정수를 입력하세요: ");
+//			arrayNum = scanner.nextInt();
+//			array[i]= arrayNum;
 		}
-		
+		//순서대로 입력
 		System.out.println("순서대로 입력된결과");
 		for(int i=0;i<array.length;i++) {
 			System.out.print(array[i]+" ");
 		}
-		System.out.println("홀수/짝수 구분입력결과");
+		//홀수/짝수 구분입력
+		System.out.println("\n홀수/짝수 구분입력결과");
 		
 	}
 
