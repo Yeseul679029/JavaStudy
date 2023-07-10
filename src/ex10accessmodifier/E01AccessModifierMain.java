@@ -53,7 +53,7 @@ public class E01AccessModifierMain {
 //		two.defaultMethod();//에러발생
 		two.publicMethod();
 		
-		/*패키지가 달라지만 접근이 안된다
+		/*패키지가 달라지면 접근이 안된다
 		다른 패키지에 선언된 디폴트 클래스이므로 인스턴스 생성이
 		불가능하다. import 자체가 불가능하므로 아예 사용할 수 없는 
 		클래스가 된다..*/

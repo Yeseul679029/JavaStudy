@@ -2,7 +2,7 @@ package ex10accessmodifier;
 
 /*class를 정의할때는 반드시 public이나 default(생략형)만
 사용할 수 있다. private은 class정의에는 사용할 수 없다. */
-//클래스는 프라이빗 클래스라는건 없다
+//클래스는 PrivateClass 클래스라는건 없다
 //private class PrivateClass1 {
 //	void myFunc() {
 //		System.out.println();

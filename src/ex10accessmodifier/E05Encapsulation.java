@@ -43,7 +43,7 @@ class EncapsulLogic {
 	void doProcess() {
 		memberRegist.doMemberRegist();//1.가입
 		autoLogin.doAutoLogin();//2.로그인
-		congratulationPoint.doCongratulationPoint();//3.
+		congratulationPoint.doCongratulationPoint();//3.포인트지급
 		firstLoginEvent.doFirstLoginEvent();//4.이벤트페이지
 	}
 }
