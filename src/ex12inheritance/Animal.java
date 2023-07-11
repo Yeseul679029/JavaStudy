@@ -16,23 +16,26 @@ Animal 클래스정의
  */
 public class Animal {
 
-	//멤버변수
+	//멤버변수 : 특정한 연산이 없다면 대부분의 멤버변수는 String으로 정의한다.
 	private String species;
-	int age;
-	String gender;
+	int age; //public
+	String gender; //public
 	
-	//생성자메소드
+	//생성자메소드 : 3개의 멤버변수를 초기화한다.
 	public Animal(String species,int age,String gender) {
 		this.species = species;
 		this.age = age;
 		this.gender = gender;
 	}
-	/* 부모클래스의 멤버가 private
-	 */
+	/* 부모클래스의 멤버가 private인 경우 자식클래스에서 접근이
+	불가능하므로 반드시 getter/setter 메소드를 통해 접근해야한다.
+	-getter : private멤버를 반환할때 사용
+	-setter : 값을 설정할때 사용
+	public */
 	protected String getSpecies() {
 		return species;
 	}
-	
+	//멤버 메소드 : 현재 상태를 출력
 	public void showAnimal() {
 		System.out.println("동물의종류-> "+species);
 		System.out.println("나이-> "+age);

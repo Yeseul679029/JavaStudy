@@ -54,7 +54,7 @@ public class E06Overriding {
 		모두 접근할 수 있다. */
 		baseSpeaker.setVolumn(10);
 		baseSpeaker.setBase(20);
-		/*오버라이딩 된 메서드를 호출하면 자식쪽의 ahowState()가
+		/*오버라이딩 된 메서드를 호출하면 자식쪽의 showState()가
 		호출된다. 부모쪽의 메서드는 자식에 의해 가려지게된다.*/
 		baseSpeaker.showState();//볼륨과 베이스가 출력된다.
 		
