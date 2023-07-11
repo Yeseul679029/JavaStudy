@@ -1,11 +1,11 @@
 package ex12inheritance;
 
-class A {
-	public A() {} //A클래스의 디폴트 생성자(생략)
+class AT {
+	public AT() {} //A클래스의 디폴트 생성자(생략)
 }
 
-class B extends A {
-	public B() {//B클래스의 디폴트 생성자(생략)
+class BT extends AT {
+	public BT() {//B클래스의 디폴트 생성자(생략)
 		super();//부모클래스인 A의 생성자를 호출하는 문장(생략)
 	}
 }
@@ -22,7 +22,7 @@ public class Test {
 		디폴트가 아니라 인자를 가지고있는 상태가되면 super(9999)
 		이렇게 될수가있다.
 		*/
-		B b = new B();
+		BT b = new BT();
 
 	}
 
