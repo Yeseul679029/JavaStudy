@@ -39,7 +39,7 @@ public class E09InstanceOf {
 	 */
 	//매개변수는 Box 타입
 	static void wrapBox(Box b) {
-		//instanceof로 해당 타입이 맞는지 확인한후
+		//instanceof로 형변환이 되는지 확인한 후
 		if(b instanceof GoldPaperBox) {
 			//맞다면 b를 GoldPaperBox로 형변환 후 .goldWrap();를 호출한다.
 			((GoldPaperBox)b).goldWrap();

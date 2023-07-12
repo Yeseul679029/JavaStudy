@@ -2,7 +2,7 @@ package ex12inheritance;
 
 //부모클래스
 public class DeParent {
-	//멤버변수 : 정보은닉을 위해 pricate으로 정의
+	//멤버변수 : 정보은닉을 위해 private으로 정의
 	private String name;
 	private int age;
 	//생성자 : 디폴트 생성자, 인수생성자 둘 다 정의
