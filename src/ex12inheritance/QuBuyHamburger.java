@@ -58,9 +58,9 @@ class Burger {
 	//햄버거 정보 출력
 	/* 버거명, 가격, 식재료 출력*/
 	public void hamburgerInfo() {
-		System.out.println("버거명:"+burgerName);
-		System.out.println("가격:"+getBurgerPrice());
-		System.out.println("식재료:"+sauce+patty+vegetable);
+		System.out.println("버거명: "+burgerName);
+		System.out.println("가격: "+getBurgerPrice());
+		System.out.printf("식재료: %s, %s, %s\n",sauce,patty,vegetable);
 	}
 }
 //햄버거의 기본가격 추상화 
@@ -77,7 +77,8 @@ class HamburgerPrice {
 	}
 	//기본가격계산
 	public void basicPrice() {
-		System.out.println(burger.getBurgerPrice()+COKE+POTATO);
+		int price = burger.getBurgerPrice()+COKE+POTATO;
+		System.out.printf("결제금액: %d\n",price);
 	}
 	//햄버거와 결제금액 출력
 	public void showPrice() {
@@ -95,7 +96,8 @@ class SetPrice extends HamburgerPrice {
 	//세트가격계산(오버라이딩)
 	@Override
 	public void basicPrice() {
-		System.out.println(burger.getBurgerPrice()+COKE+POTATO-500);
+		int price = burger.getBurgerPrice()+COKE+POTATO-500;
+		System.out.printf("결제금액: %d\n",price);
 		
 	}
 	//햄버거와 세트결제금액 출력(오버라이딩)	
