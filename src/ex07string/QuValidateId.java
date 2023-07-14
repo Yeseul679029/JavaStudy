@@ -46,6 +46,16 @@ public class QuValidateId {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("아이디를 입력하세요 ");
 		String userId = scanner.nextLine();
+		
+		/* 만약 String을 Javascript처럼 배열로 만들고 싶다면
+		toCharArray() 메서드를 사용하면 된다. 해당 메서드는 
+		String을 char타입의 배열로 변환해준다. 
+		인덱스를 즉시 배열처럼 쓸수있는것*/
+		char[] charArr = userId.toCharArray();
+		for(int i=0; i<charArr.length;i++) {
+			System.out.print(charArr[i]+"-");
+		}
+		
 		//id 변수
 		boolean idchk = idValidate(userId);
 		//idchk가 true이면 사용할수있는 아이디
