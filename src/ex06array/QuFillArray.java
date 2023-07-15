@@ -12,26 +12,42 @@ import java.util.Scanner;
 public class QuFillArray {
 
 	public static void main(String[] args) {
+		//순서대로 넣을 배열
+		int [] arr1 = new int[10];
+		//홀짝대로 넣을 배열
+		int [] arr2 = new int[10];
+		//처음과 끝자리 수
+		int starNum = 0;
+		int endNum = arr2.length-1;
 		
-//		Scanner scanner = new Scanner(System.in);
-//		int[] array = new int[10];
-		int[] array = new int[] {1,3,4,5,2,6,7,8,9,0};
-		int arrayNum;
-		
-		//array의 크기만큼 반복해서 수 채워넣기
-		for(int i=0;i<array.length;i++) {
-//			System.out.print((i+1)+"번째 정수를 입력하세요: ");
-//			arrayNum = scanner.nextInt();
-//			array[i]= arrayNum;
+		for(int i=0; i<arr1.length;i++) {
+			
+			Scanner scan = new Scanner(System.in);
+			System.out.print((i+1)+"정수를 입력하세요:");
+			int input = scan.nextInt();
+			
+			//순서대로 배열에 담기
+			arr1[i]= input;
+			
+			if(input%2==0) {
+				//짝수일때 앞에서 입력
+				arr2[starNum++] = input;
+			}
+			else {
+				//홀수일때 뒤부터 입력
+				arr2[endNum] = input;
+				endNum--;
+			}
 		}
-		//순서대로 입력
-		System.out.println("순서대로 입력된결과");
-		for(int i=0;i<array.length;i++) {
-			System.out.print(array[i]+" ");
+		System.out.println("순서대로입력된결과");
+		for(int i=0; i<arr1.length; i++) {
+			System.out.print(arr1[i]+" ");
 		}
-		//홀수/짝수 구분입력
 		System.out.println("\n홀수/짝수 구분입력결과");
+		for(int a : arr2) {
+			System.out.print(a+" ");
+		}
+		
 		
 	}
-
 }

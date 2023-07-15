@@ -20,7 +20,6 @@ class PersonalInfoDTO{
 	private String juminNum;
 	//멤버변수 선언 후 자동생성 하세요. 생성자
 	public PersonalInfoDTO(String name, String juminNum) {
-		super();
 		this.name = name;
 		this.juminNum = juminNum;
 	}

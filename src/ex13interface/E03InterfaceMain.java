@@ -54,7 +54,7 @@ class MyClass extends SimpleClass
 	}
 	@Override
 	public void absFunc2() {
-		System.out.println("absFunc1() 호출됨" );
+		System.out.println("absFunc2() 호출됨" );
 	}
 	/*SimpleClass 클래스의 멤버메서드는 필수사항이 아니므로
 	필요한 경우에만 오버라이딩 하면된다.*/
