@@ -86,6 +86,7 @@ public class E03SingleToneDesignPattern {
 		SingleTone st3 = SingleTone.getInstance();
 		st3.shareVar = 200;
 		st3.print();
+		System.out.println(st3.shareVar);
 		
 		//싱글톤 객체이므로 참조값은 동일하게 출력된다.
 		System.out.println(String.format("st2의주소:%s",st2));
