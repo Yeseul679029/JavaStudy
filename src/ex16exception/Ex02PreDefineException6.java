@@ -4,9 +4,14 @@ public class Ex02PreDefineException6 {
 	 
 	public static void main(String[] args)  {	
   
+		/*
+		Object클래스를 단독적으로 생성한 경우 다른 클래스와의 상속관계가
+		전혀 없는 상태이므로 이 상태에서는 형변환을 할 수 없어 예외가 
+		발생한다.
+		 */
 		Object object = new Object();
 		try {
-			//순수한 오브젝트 객체이기때문에 
+			//순수한 object객체이므로 자식 타입으로 형변환 할 수 없다.
 			String strObject = (String)object;
 		}
 		catch(ClassCastException e) {
@@ -27,6 +32,12 @@ public class Ex02PreDefineException6 {
 				 
 	}////end of main	
 	
+	/*
+	String 객체가 인수로 전달되면서 매개변수를 통해 object로 자동형변환
+	되므로 여기에서 상속관계가 확인된다. 매개변수 o는 원래 String타입이었
+	으므로 instanceof를 통해 String임을 확인할 수 있고 이 경우에는 
+	다운캐스팅이 가능하게된다.
+	 */
 	public static boolean myClassCasting(Object o) {
 		if(o instanceof String) {
 			return true;

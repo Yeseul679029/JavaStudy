@@ -4,8 +4,10 @@ public class Ex02PreDefineException1 {
 
 	public static void main(String[] args) {
 
+		//배열의 인덱스를 벗어난 경우 발생된다.
 		System.out.println("### ArrayIndexOutOfBoundsException ###");
 		
+		//크기가 2인 배열을 생성한다.
 		int[] intArr = new int[2];
 		
 		/*
@@ -44,6 +46,8 @@ public class Ex02PreDefineException1 {
 			e.printStackTrace();
 		}
 		
+		//예외처리를 통해 실행의 흐름이 중단되지 않으므로 아래 문장은
+		//정상적으로 출력된다.
 		System.out.println("0번방 재출력:"+ intArr[0]);
 		System.out.println("### ArrayIndexOutOfBoundsException발생 후 ###");
 		
