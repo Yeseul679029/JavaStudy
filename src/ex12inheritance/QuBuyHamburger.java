@@ -97,7 +97,7 @@ class SetPrice extends HamburgerPrice {
 	@Override
 	public void basicPrice() {
 		int price = burger.getBurgerPrice()+COKE+POTATO-500;
-		System.out.printf("결제금액: %d\n",price);
+		System.out.printf("세트결제금액: %d\n",price);
 		
 	}
 	//햄버거와 세트결제금액 출력(오버라이딩)	
