@@ -18,7 +18,7 @@ public class E03MathClass extends Object {
 	-메서드는 static으로 선언되어 있어 인스턴스 생성없이 클래스명으로
 		호출 가능하다.
 	*/
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		System.out.println("원주율:"+Math.PI);
 		

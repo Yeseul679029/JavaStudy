@@ -120,6 +120,16 @@ public class E01WrapperClass2 {
 		}
 		System.out.println("총 공백수:"+whiteCnt);
 		
+		
+		char[] chArr2 = whiteString.toCharArray();
+		int cnt = 0;
+		//문자의 갯수만큼 반복한다.
+		for(int i=0; i<chArr2.length;i++) {
+			if(Character.isWhitespace(chArr2[i])) {
+				cnt++;
+			}
+		}
+		System.out.println("공백수 : "+cnt);
 	
 	}
 
