@@ -19,12 +19,15 @@ public class Ex02PreDefineException4 {
 			/*
 			인스턴스 변수만 생성하고, 참조할 객체가 없는 경우에
 			메서드를 호출하면 예외가 발생하게된다.
+			예외가 발생하는 구간을 좁게묶을것인지 넓게묶을것인지
+			관련된 코드들은 하나로 묶는게 좋다.
 			 */
 			System.out.println(toDay.getTime());
 		}
 		catch(NullPointerException e) {
 			System.out.println("toDay 참조변수는 null입니다.");
 			System.out.println("예외메세지:"+ e.getMessage());
+			e.printStackTrace();
 		}
 				 
 	}////end of main	

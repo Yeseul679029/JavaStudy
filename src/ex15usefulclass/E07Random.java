@@ -44,7 +44,9 @@ public class E07Random {
 		System.out.println("\n# 난수생성3 : nextInt() 인수없음");
 		Random random4 = new Random();
 		for (int i=0; i<10; i++) {
-			System.out.print(random4.nextInt()+" ");
+			int randomNum=Math.abs(random4.nextInt()%10);
+//			System.out.print(random4.nextInt()+" ");
+			System.out.print(randomNum+" ");
 		}
 	}
 
