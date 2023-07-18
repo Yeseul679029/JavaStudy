@@ -8,8 +8,12 @@ import java.util.Scanner;
 	예외를 처리하시오.(재시작을 위한 메뉴는 제외)
  */
 
-
-public class QuRPSException {
+class Replay extends Exception{
+	public Replay(){
+		super("입력잘못");
+	}
+}
+public class QuRPSException2 {
 
 	public static void main(String[] args){
 		
@@ -69,9 +73,9 @@ public class QuRPSException {
 			//4.게임재시작 여부 확인			 
 			if(gameCount>=5) {
 				
+				try {
 				//0과 1을 입력하지 않아도 게임은 재시작된다. 
 				System.out.print("게임재시작(1), 종료(0):");
-				try {
 					int restart = scanner.nextInt();
 				
 					if(restart==0) {
@@ -80,16 +84,19 @@ public class QuRPSException {
 						break;
 						
 					}
-					else {
+					else if(restart==1) {
 						System.out.println("게임 재시작^^");
 						gameCount=0;
 						
+						
+					}
+					else {
+						Replay ex = new Replay();
+						throw ex;
 					}
 				}
-				catch (InputMismatchException e) {
-					System.out.println("[예외발생2] 숫자만입력");
-					scanner.nextLine();
-					gameCount=0;
+				catch (Replay e) {
+					System.out.println(e.getMessage());
 				}
 				
 				
