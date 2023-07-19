@@ -190,7 +190,8 @@ class FriendInfoHandler{
 			//고딩을 선택한 경우 별명을 추가로 입력받는다.
 			System.out.println("별명:"); iNickname = scan.nextLine();
 			//High 인스턴스를 생성한 후 참조변수에 저장한다.
-			HighFriend high = new HighFriend(iName, iPhone, iAddr, iNickname);
+			HighFriend high = 
+					new HighFriend(iName, iPhone, iAddr, iNickname);
 			/* 참조변수를 인스턴스 배열에 추가한다. 인덱스로 사용
 			된 변수의 초기값이 0이므로, 0번 인덱스에 추가한 뒤 
 			1증가시킨다. 이를 위해 '후위증가' 하고있다. */
