@@ -1,6 +1,7 @@
 package ex17collection;
 
 import java.util.LinkedList;
+import java.util.Scanner;
 
 import common.Student;
 
@@ -40,8 +41,13 @@ public class QuArrayList {
 		list.add(st4);
 			
 		//1.검색할 이름을 입력받음
-			
+			Scanner scan = new Scanner(System.in);
+			System.out.print("삭제할 이름을 입력");
+			String seachName = scan.nextLine();
 		//2.확장for문으로 컬렉션 전체를 접근
+		for(Student st : list) {
+			System.out.println(st);
+		}
 			
 		//3.검색결과 유/무에 따라 
 		//검색결과 있을때…검색된 데이터 삭제
