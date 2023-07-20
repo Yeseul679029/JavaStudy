@@ -43,17 +43,34 @@ public class QuArrayList {
 		//1.검색할 이름을 입력받음
 			Scanner scan = new Scanner(System.in);
 			System.out.print("삭제할 이름을 입력");
-			String seachName = scan.nextLine();
+			String delName = scan.nextLine();
+			boolean isfind = false;
 		//2.확장for문으로 컬렉션 전체를 접근
 		for(Student st : list) {
+//			System.out.println(st);
+			
+			//3.검색결과 유/무에 따라 
+			//검색결과 있을때…검색된 데이터 삭제
+			//검색결과 없을때...검색결과가 없다고 출력
+			if(delName.equals(st.getName())) {
+				list.remove(st);
+				isfind = true;
+				break;
+			}
+		}
+		if(isfind==false) {
+			System.out.println("정보가 없습니다.");
+			System.out.println("================");
+		}
+		
+		//4.전체정보 출력
+		for(Student st : list) {
+			System.out.println("================");
+			System.out.println("전체정보를 출력합니다.");
 			System.out.println(st);
 		}
-			
-		//3.검색결과 유/무에 따라 
-		//검색결과 있을때…검색된 데이터 삭제
-		//검색결과 없을때...검색결과가 없다고 출력
-
-		//4.전체정보 출력
+		
+		
 	}
 
 

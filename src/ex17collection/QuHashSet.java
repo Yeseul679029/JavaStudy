@@ -1,6 +1,8 @@
 package ex17collection;
 
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Scanner;
 
 /*
 컬렉션 set에 저장된 객체를 이름으로 검색하자. 
@@ -63,6 +65,13 @@ public class QuHashSet {
 		{
 			System.out.println(av.toString());			
 		}
+		
+		Scanner sc = new Scanner(System.in);
+		//검색할 이름
+		System.out.print("검색할 이름을 입력하세욤:");
+		String seachName = sc.nextLine();
+		
+//		Iterator<Avengers> itr = 
 	}
 
 
