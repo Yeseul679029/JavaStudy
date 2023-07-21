@@ -58,7 +58,7 @@ public class Ex08AsList {
 		System.out.println();
 		
 		/*
-		Set<E> 컬렉션은 중복을 허용하지 않으므러 List에 저장된
+		Set<E> 컬렉션은 중복을 허용하지 않으므로 List에 저장된
 		중복값을 제거할 수 있다.
 		 */
 		HashSet<String> set = new HashSet<String>(list);
