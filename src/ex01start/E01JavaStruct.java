@@ -20,6 +20,7 @@ package ex01start;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 public class E01JavaStruct {
 
 	public static void main(String[] args) {
@@ -36,6 +37,15 @@ public class E01JavaStruct {
 				new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String toDayString = simple.format(toDayOfDate);
 		System.out.println("변형된날짜: "+ toDayString);
+		
+		int result = solution(40);
+		System.out.println(result);
+		
+	}
+
+	public static int solution(int age) {
+		int answer = (2022 - age)+1;
+		return answer;
 	}
 
 }
